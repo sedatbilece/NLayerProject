@@ -18,6 +18,8 @@ namespace NLayerProject.Core.Models
         public bool IsDelete { get; set; }
 
         public int CategoryId { get; set; }
+        public int InnerBarcode { get; set; }
+        
 
         public virtual Category Category { get; set; }// this virtual for tracking database and one object 
     }
