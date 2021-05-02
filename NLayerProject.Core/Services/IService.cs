@@ -1,17 +1,17 @@
-﻿using OfficeOpenXml.FormulaParsing.Excel.Functions.Text;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLayerProject.Core.Repositories
+namespace NLayerProject.Core.Services
 {
-    public interface IRepository <TEntity> where TEntity:class// we  definated parameter type  mean is class
+    public interface IService <TEntity> where TEntity : class
     {
 
+
         // task for async 
-        Task< TEntity> GetByIdAsync(int id);
+        Task<TEntity> GetByIdAsync(int id);
 
         Task<IEnumerable<TEntity>> GetAllAsync();
 
@@ -32,6 +32,5 @@ namespace NLayerProject.Core.Repositories
         void RemoveRange(IEnumerable<TEntity> entities);
 
         TEntity Update(TEntity entity);
-
     }
 }

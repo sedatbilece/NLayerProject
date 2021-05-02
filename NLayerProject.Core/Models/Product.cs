@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NLayerProject.Core.Models
 {
-    class Product
+    public  class Product
     {
 
 

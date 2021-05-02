@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLayerProject.Core.Repositories
+namespace NLayerProject.Core.Services
 {
-    public interface ICategoryRepository : IRepository<Category>
+    public interface ICategoryService: IService<Category>
     {
-
         Task<Category> GetWithProductsByIdAsync(int CategoryId);
+
+        // we coding category other func not spesific database
 
     }
 }
