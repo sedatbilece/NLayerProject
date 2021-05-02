@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using NLayerProject.Core.Models;
+using NLayerProject.Data.Configurations;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -24,7 +25,12 @@ namespace NLayerProject.Data
         // tables options here  while creating
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+
+            //added tables config file in here
+            modelBuilder.ApplyConfiguration( new ProductConfiguration() );
+
+            modelBuilder.ApplyConfiguration( new CategoryConfiguration() );
+
         }
 
     }

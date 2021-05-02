@@ -16,6 +16,8 @@ namespace NLayerProject.Data.Configurations
         public void Configure(EntityTypeBuilder<Product> builder)
         {
 
+            builder.ToTable("Products");// table name
+
             builder.HasKey(x => x.Id);// id is primary key
 
             builder.Property(x => x.Id).UseIdentityColumn();// 
