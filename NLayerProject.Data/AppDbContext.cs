@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using NLayerProject.Core.Models;
 using NLayerProject.Data.Configurations;
+using NLayerProject.Data.Seeds;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -30,6 +31,9 @@ namespace NLayerProject.Data
             modelBuilder.ApplyConfiguration( new ProductConfiguration() );
 
             modelBuilder.ApplyConfiguration( new CategoryConfiguration() );
+
+            modelBuilder.ApplyConfiguration( new ProductSeed(new int[] { 1,2}) );
+            modelBuilder.ApplyConfiguration( new CategorySeed(new int[] { 1, 2 }) );
 
         }
 

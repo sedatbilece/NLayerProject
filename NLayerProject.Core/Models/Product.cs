@@ -9,7 +9,7 @@ namespace NLayerProject.Core.Models
 
 
         public int Id { get; set; }
-        public int Name { get; set; }
+        public String Name { get; set; }
 
         public int Stock { get; set; }
 
