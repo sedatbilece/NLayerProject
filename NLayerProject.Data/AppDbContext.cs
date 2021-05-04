@@ -20,7 +20,7 @@ namespace NLayerProject.Data
 
         // for database table  ...
         public DbSet<Category> categories { get; set; }
-        public DbSet<Product> prudocts { get; set; }
+        public DbSet<Product> products { get; set; }
 
 
         // tables options here  while creating
