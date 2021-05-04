@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NLayerProject.Data.Repositories
 {
-    class Repository<TEntity> : IRepository<TEntity> where TEntity : class   
+   public class Repository<TEntity> : IRepository<TEntity> where TEntity : class   
     {
         public readonly DbContext _context;
         public readonly DbSet<TEntity> _dbset;
@@ -17,7 +17,7 @@ namespace NLayerProject.Data.Repositories
         public Repository(DbContext context)// if  which entity comes in there we operating this 
         {
             _context = context;
-            _dbset = context.Set<TEntity>();
+            _dbset = context.Set<TEntity>();// dbset get context for entity and we  continue like this
         }
 
 
