@@ -9,11 +9,11 @@ namespace NLayerProject.Data.Configurations
 {
 
     // config file extending 
-    class ProductConfiguration : IEntityTypeConfiguration<Product>
+    class ProductConfiguration : IEntityTypeConfiguration<Category>
     {
 
         // interface implemeting
-        public void Configure(EntityTypeBuilder<Product> builder)
+        public void Configure(EntityTypeBuilder<Category> builder)
         {
 
             builder.ToTable("Products");// table name
