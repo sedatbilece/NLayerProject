@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace NLayerProject.Core.Repositories
 {
-    public interface IProductRepository : IRepository<Product>
+    public interface IProductRepository : IRepository<Category>
     {
 
-        Task<Product> GetWithCategoryByIdAsync(int productid);
+        Task<Category> GetWithCategoryByIdAsync(int productid);
 
     }
 }

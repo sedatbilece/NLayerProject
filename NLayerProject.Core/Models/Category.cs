@@ -11,13 +11,13 @@ namespace NLayerProject.Core.Models
 
         public Category()
         {
-            Products = new Collection<Product>();
+            Products = new Collection<Category>();
         }
 
         public int Id { get; set; }
         public String Name { get; set; }
         public bool IsDelete { get; set; }
 
-        public ICollection<Product> Products { get; set; }// this here is emurable list 
+        public ICollection<Category> Products { get; set; }// this here is emurable list 
     }
 }
