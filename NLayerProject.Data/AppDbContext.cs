@@ -18,7 +18,7 @@ namespace NLayerProject.Data
         }
 
 
-        // for database table 
+        // for database table  ...
         public DbSet<Category> categories { get; set; }
         public DbSet<Product> prudocts { get; set; }
 
