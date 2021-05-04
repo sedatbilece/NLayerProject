@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace NLayerProject.Core.Services
 {
-    public interface IProcuctService :IService<Product>
+    public interface IProcuctService :IService<Category>
     {
 
-        Task<Product> GetWithCategoryByIdAsync(int productid);
+        Task<Category> GetWithCategoryByIdAsync(int productid);
 
 
 

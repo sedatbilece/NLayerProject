@@ -7,7 +7,7 @@ using System.Text;
 
 namespace NLayerProject.Data.Seeds
 {// info is in product seed
-    class CategorySeed : IEntityTypeConfiguration<Product>
+    class CategorySeed : IEntityTypeConfiguration<Category>
     {
 
         private readonly int[] _ids;
@@ -19,11 +19,11 @@ namespace NLayerProject.Data.Seeds
 
 
 
-        public void Configure(EntityTypeBuilder<Product> builder)
+        public void Configure(EntityTypeBuilder<Category> builder)
         {
 
-            builder.HasData( new Category{Id = _ids[0], Name = "kalemler"},
-                             new Category { Id = _ids[1], Name = "defterler" }
+            builder.HasData( new Category { Id = _ids[0], Name = "kalemler"},
+                             (object)new Category { Id = _ids[1], Name = "defterler" }
                         
                 );
 

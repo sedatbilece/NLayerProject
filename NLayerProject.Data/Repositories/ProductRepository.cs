@@ -14,7 +14,7 @@ namespace NLayerProject.Data.Repositories
         private AppDbContext _appDbContext { get => _context as AppDbContext; }// context converting entity context
 
         public ProductRepository(DbContext context) : base(context)//  necessary constructor 
-        {
+        {    
         }
 
        
