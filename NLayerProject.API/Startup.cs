@@ -10,6 +10,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using NLayerProject.Data;
+using Microsoft.EntityFrameworkCore;
+using NLayerProject.Core.UnitOfWork;
+using NLayerProject.Data.UnitOfWorks;
 
 namespace NLayerProject.API
 {
@@ -22,13 +26,24 @@ namespace NLayerProject.API
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+       
         public void ConfigureServices(IServiceCollection services)
         {
+            // program go to unitofwork while request  come
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+
             services.AddControllers();
+
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                // added sql server path 
+                options.UseSqlServer(Configuration["ConnectionStrings:SqlConStr"].ToString());
+
+            });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+       
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

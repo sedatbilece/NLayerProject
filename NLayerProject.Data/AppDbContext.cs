@@ -9,7 +9,7 @@ using System.Text;
 
 namespace NLayerProject.Data
 {
-    class AppDbContext :DbContext
+   public  class AppDbContext :DbContext
     {
         // base options is switcher to db type  sql ,mysql or something
         public AppDbContext(DbContextOptions<AppDbContext> options):base (options)
