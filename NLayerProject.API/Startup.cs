@@ -38,7 +38,14 @@ namespace NLayerProject.API
             services.AddDbContext<AppDbContext>(options =>
             {
                 // added sql server path 
-                options.UseSqlServer(Configuration["ConnectionStrings:SqlConStr"].ToString());
+                options.UseSqlServer(Configuration["ConnectionStrings: SqlConStr"].ToString(),o=> {
+                
+
+                    // referenced to data layer
+                    o.MigrationsAssembly("NLayerProject.Data");
+                
+                
+                });
 
             });
         }
